@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#04080f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="OG Revise">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>OG Revise</title>
+<style>
+  html,body{margin:0;height:100%;background:#04080f;color:#7f9cc4;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    display:flex;align-items:center;justify-content:center;text-align:center}
+  .box{opacity:.85}
+  .ring{width:46px;height:46px;margin:0 auto 16px;border-radius:50%;
+    border:3px solid rgba(0,212,255,.25);border-top-color:#00d4ff;
+    animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  a{color:#00d4ff}
+</style>
+<!-- Send everyone straight to the app. This guarantees the folder root
+     (/OGinfo/) always resolves, so the installed PWA never hits a 404. -->
+<script>
+  location.replace('OG-Revise-PWA-v2.html' + location.search + location.hash);
+</script>
+<meta http-equiv="refresh" content="0; url=OG-Revise-PWA-v2.html">
+</head>
+<body>
+  <div class="box">
+    <div class="ring"></div>
+    <div>Loading OG Revise…</div>
+    <div style="margin-top:10px;font-size:13px">
+      If nothing happens, <a href="OG-Revise-PWA-v2.html">tap here</a>.
+    </div>
+  </div>
+</body>
+</html>
